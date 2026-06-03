@@ -11,8 +11,16 @@
     <body>
         <nav class="navbar">
             <div class="nav-left">
-                <!-- Aquí va el PHP para la bandera -->
-                <img src="img/banderas/mx.png" class="flag-icon">
+                <?php 
+                $img = [
+                    "it" => "img/banderas/it.png",
+                    "mx" => "img/banderas/mx.png",
+                    "fr" => "img/banderas/fr.png",
+                    "ar" => "img/banderas/ar.png"
+                ];
+                $pais=$_GET["pais"];
+                echo "<img src=". $img[$pais] ." class='flag-icon'>";
+                ?>
                 <h1>PizzaPlaneta</h1>
             </div>
             <div class="nav-right">
@@ -94,7 +102,7 @@
                             <input type="checkbox" name="extras[]" id="ipt-queso" value="Borde de Queso">
                             <label for="queso">Borde de Queso</label> <br>
 
-                            <input type="checkbox" name="extras[]" id="ipt-champinones" value="Champiñones">
+                            <input type="checkbox" name="extras[]s" id="ipt-champinones" value="Champiñones">
                             <label for="champinones">Champiñones</label><br>
 
                             <input type="checkbox" name="extras[]" id="ipt-jalapenos" value="Jalapeños Extra">
